@@ -18,5 +18,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          echo test > /tmp/abcd
+          sudo rm -rf ./asible_front
+          sudo git clone https://github.com/hyeonjju/ansible_front.git
+          sudo mv -f ./asible_front/*.html /var/www/html
     
