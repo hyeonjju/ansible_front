@@ -13,10 +13,10 @@ jobs:
     - name: get code from github
       uses: appleboy/ssh-action@v0.1.9
       with:
-        host: ${{ SECRETS_REMOTE_HOST }}
-        username: ${{ SECRETS_REMOTE_USER }}
-        key: ${{ SECRETS_SSH_KEY }}
-        port: ${{ SECRETS_REMOTE_PORT }}
+        host: ${{ REMOTE_HOST }}
+        username: ${{ REMOTE_USER }}
+        key: ${{ KEY }}
+        port: ${{ PORT }}
         script: |
           echo test > /tmp/abcd
     
